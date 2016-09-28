@@ -1,0 +1,53 @@
+#overlay {
+ 	          position:absolute;
+	           display:none; 
+
+            /* color with alpha transparency */
+            background-color: rgba(0, 0, 0, 0.7);
+
+            /* stretch to screen edges */
+            top: 0;
+	       left: 0;
+            bottom: 0;
+            right: 0;
+          }
+
+#popup {
+            position: absolute;
+            width: 160px;
+            height: 80px;
+            display: none;
+            padding: 20px;
+            background-color: white;
+            /*text-align: center;*/
+
+            /* center it ? */
+            top: 50%;
+            left: 50%;
+            /*margin-left: -150px;
+            margin-top: -75px;*/
+        }
+
+.params {
+              -webkit-column-count: 2; /* Chrome, Safari, Opera */
+              -moz-column-count: 2; /* Firefox */
+              column-count: 2;
+              -moz-column-width: 400px;
+          }
+.params input {
+  float: right;
+  width: 50px;
+}
+          
+.params p {
+  margin-top: 0px;
+}
+
+.icon {
+	background-image: url("icons.png");
+	background-color: transparent;
+	width: 32px;
+	height: 32px;
+	display: inline-block;
+}
+
