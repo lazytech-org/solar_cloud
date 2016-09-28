@@ -71,11 +71,11 @@ All the settings are located at lines 67 - 96 of the file init.lua, only the Emo
 
 If the WiFi is not set or avalaible, the system will start in AP mode.
 
-You have to connect to the ESSID Solar_Cloud, the PSK password is lazytech
+You have to connect to the ESSID "Solar_Cloud", the PSK password is "lazytech"
 
 Once you are connected, point your browser to http://192.168.1.4, the admin page will show.
 
-The default password is password.
+The default admin password is "password".
 
 Once the Wifi configured, the system will reboot in station mode and send the data to your EmonCMS instance.
 
