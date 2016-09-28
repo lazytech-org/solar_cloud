@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+   <head>
+      <meta charset="utf-8"/>
+       <title>Solar Cloud</title>
+      <link href="style.css" rel="stylesheet">
+   </head>
+   <body>
+      <div id="overlay"></div>
+      <div id="page" class="page">
+      <h1>Solar Cloud Admin</h1>
+      <noscript>You must enable JavaScript</noscript>
+      <hr/>
+      <div class="params">
+          <p>Consign Temperature: <input id="consign" type="number" value=40 onchange="changed(id, value)"></p>
+          <p>Delta T: <input id="delta_t" type="number" value=5 onchange="changed(id, value)"></p>
+          <p>Read Interval(seconds): <input id="interval" type="number" value=5 onchange="changed(id, value)"></p>
+          <p>Stock Temp Pin: <input id="tstockpin" type="number" value=3 onchange="changed(id, value)"></p>
+          <p>Thermal temp Pin: <input id="tthermpin" type="number" value=1 onchange="changed(id, value)"></p>
+          <p>FlowMeter Pin: <input id="dmpin" type="number" value=6 onchange="changed(id, value)"></p>
+          <p>Heater Pin: <input id="srrespin" type="number" value=8 onchange="changed(id, value)"></p>
+          <p>Pump Pin: <input id="srpumppin" type="number" value=0 onchange="changed(id, value)"></p>
+          <br>
+          <p style="text-align: center;">Paramètres Wi-Fi</p>
+          <button id="wifi" style="width: 100%; " onclick="wifi();">Scan</button>
+          <div id="wifi_settings" style="height: 200px; overflow: scroll; display: none;"></div>
+            <label for="wifikey">Wifi key: </label>
+            <input style="width: 50%;" onBlur="minimum_field(this, 8);" type="password" id="wifikey" name="wifikey" disabled/>
+          <button id="connectbtn" style="width: 100%;" onclick="set_wifi()" disabled>Connect</button>
+      </div>
+      <button id="apply" disabled onclick='send();'>Apply</button>
+      <button id="cancel" disabled onclick='cancel();'>Cancel</button>
+      <pre id="log" style="height: 20em; overflow-y: scroll; background-color: #faa;"></pre>
+      <div id="popup">
+        <div>Enter Password:</div>
+        <input id="pass" type="password"/>
+        <button onclick="check_pass()">Done</button>    
+       </div>
+     </div>
+     <script type="text/javascript" src="admin.js"></script>
+     <script type="text/javascript" src="sha256.min.js"></script>
+   </body>
+</html>
